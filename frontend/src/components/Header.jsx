@@ -1,6 +1,10 @@
 import React from 'react';
 import { User } from 'lucide-react';
-import '../Dashboard.css';
+// import '../Dashboard.css';
+// import "../styles/Header.css";
+import "../styles/Dashboard.css";
+
+
 
 const Header = () => {
   return (

@@ -8,6 +8,7 @@ import '../styles/Dashboard.css';
 import EnrollModal from '../components/EnrollModal'; // Import the EnrollModal component
 import axios from 'axios';
 import Footer from '../components/Footer';
+import HeaderMainDash from '../components/HeaderMainDash';
 // --- Utility Functions (Keep these in src/utils/dashboardUtils.js if you have it) ---
 const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -149,7 +150,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container">
+    <div className="contcainer">
+      <HeaderMainDash />
+      <br></br>
       {/* Header */}
       <div className="header">
         <div className="header-left">
@@ -162,21 +165,21 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="header-right-buttons">
-            <button
+            {/* <button
                 className="enroll-new-btn"
                 onClick={handleEnrollNewClick}
             >
                 <PlusCircle size={20} /> Enroll New
-            </button>
+            </button> */}
             {/* New button to navigate to CoursesPage */}
-            <button
+            {/* <button
                 className="enroll-new-btn"
                 onClick={() => navigate('/courses')}
                 style={{ backgroundColor: 'var(--accent-green)' }} // Differentiate visually
             >
                 <Layers size={20} /> My Courses
-            </button>
-            <button className="Btn" onClick={async () => {
+            </button> */}
+            {/* <button className="Btn" onClick={async () => {
   try {
     await axios.post('http://localhost:3000/user/logout', {}, {
       withCredentials: true,
@@ -194,7 +197,7 @@ const Dashboard = () => {
     </svg>
   </div>
   <div className="text">Logout</div>
-</button>
+</button> */}
 
         </div>
       </div>
@@ -243,7 +246,7 @@ const Dashboard = () => {
             {/* Filter by Program */}
             <div className="filter-group">
                 <div className="filter-section-header">
-                    <h3>Filter by Program</h3>
+                    <h3>Filter by   Program</h3>
                     <ChevronUp size={20} className="chevron-icon" />
                 </div>
                 <div className="filter-radio-group">
